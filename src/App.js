@@ -8,7 +8,13 @@ function App() {
 
       <Button>log in</Button>
       {/* 버튼을 a링크처럼 사용하려할 때  */}
-      <Button as="a">log in</Button>
+      <Button as="a" href="/">
+        log in
+      </Button>
+      <Input />
+      <Input />
+      <Input />
+      <Input />
     </Father>
   );
 }
@@ -17,6 +23,7 @@ export default App;
 
 const Father = styled.div`
   display: flex;
+  flex-direction: column;
 `;
 
 const Box = styled.div`
@@ -34,4 +41,9 @@ const Button = styled.button`
   color: white;
   border: 0;
   border-radius: 50%;
+`;
+
+// 모든 컴포넌트에 html 속성 추가하는 법
+const Input = styled.input.attrs({ required: true, maxLength: 20 })`
+  background-color: "tomato";
 `;
