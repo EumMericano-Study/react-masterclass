@@ -5,6 +5,10 @@ function App() {
     <Father>
       <Box bgColor="teal" />
       <Circle bgColor="brown" />
+
+      <Button>log in</Button>
+      {/* 버튼을 a링크처럼 사용하려할 때  */}
+      <Button as="a">log in</Button>
     </Father>
   );
 }
@@ -23,4 +27,11 @@ const Box = styled.div`
 
 const Circle = styled(Box)`
   border-radius: 100px;
+`;
+
+const Button = styled.button`
+  background-color: tomato;
+  color: white;
+  border: 0;
+  border-radius: 50%;
 `;
